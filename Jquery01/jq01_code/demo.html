@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ajax 登录</title>
+</head>
+<body>
+    <form action="./login.php" method="post" onsubmit="return sendLogin()">
+        <input type="text" id="username" name="username"><br>
+        <input type="password" id="password" name="password"><br>
+        <button>submit</button>
+    </form>
+<script type="text/javascript">
+    function sendLogin()
+    {
+        // 触发这个事件意味着他要提交登录信息
+
+        // 1. 先手动拿到input的值
+        var user = username.value;
+        var pass = password.value;
+        // alert(user);
+
+        // 2. 发送ajax请求
+        var xhr = new XMLHttpRequest();
+
+        xhr.onreadystatechange = function(){
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                console.dir(xhr.responseText);
+
+                if (xhr.responseText == '1') {
+                    location.href = 'https://www.baidu.com';
+                } else {
+                    alert('账号或密码错误, 请重试!');
+                }
+            }
+        }
+
+        xhr.open('POST', './login.php', true);
+
+        xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+
+        xhr.send('user=' + user + '&pass=' + pass);
+
+        return false;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery</title>
+</head>
+<body>
+    <div id="box">
+        myDiv
+    </div>
+
+<script src="../jquery-3.4.1.js"></script>
+<script>
+    console.log($);
+    console.log(box.cloneNode(true));
+    // console.dir($ = 123);
+
+    console.log($('#box'));
+    $('*').click(()=>{
+        console.log(123);
+        event.cancelBubble = true;
+    });
+
+    // console.log($('#box').css('color', 'green').onclick(()=>{console.log(this)}));
+    $('#box').css('color', 'green').click(()=>{
+        event.target.css('color', 'red');
+    });
+</script>
+</body>
+</html>

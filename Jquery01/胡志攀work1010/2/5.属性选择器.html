@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv" title="17859">
+    myDiv
+</div>
+
+<div class="classDiv" title="1523">
+    classDiv123
+</div>
+<div class="classDiv" title="456" alt="456">
+    classDiv456
+</div>
+<div class="classDiv" alt="123" abc="1">
+    classDiv123
+</div>
+<script type="text/javascript" src="../jquery-3.4.1.js"></script>
+
+<script>
+    console.dir($('div[title]'));
+    console.dir($('div[alt=123]'));
+    console.dir($('div[alt!=123]'));
+    console.dir($('div[alt^=1]'));
+
+    console.dir($('div[alt$=3]'));
+
+    console.dir($('div[alt*=4]'));
+    console.dir($('div[alt=123][abc=1]'));
+
+</script>
+</body>
+</html>

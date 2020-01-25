@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内容选择器</title>
+</head>
+<body>
+    <span>小三</span>
+    <div>
+        <p>p1d</p>
+        <span>
+            <p>pp1</p>
+            <p></p>
+            <p></p>
+        </span>
+    </div>
+    <div>
+        ############1
+    </div>
+    <div>
+        ############2
+    </div>
+    <div>
+        ############3
+    </div>
+<script src="../jquery-3.4.1.js"></script>
+<script>
+console.dir($('p:contains("d")'));
+
+console.dir($('p:empty'));
+
+console.dir($('div:has(p)'));
+
+console.dir($('p:parent'));
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!--
+1. var xhr = new XMLHttpRequest(); ie3 ie6 new ActiveXObject('Microsoft.XMLHTTP')
+2. xhr.onreadystatechange = function(){
+    xhr.readyState == 4 // ajax执行成功
+    xhr.status == 200 // 表示网页网页正常放回
+
+    xhr.responseText // 获取文类型的值 JSON
+    xhr.responseXML // 获取XML类型的值, 会自动解析
+}
+3.1 设置请求信息 xhr.open(方式, url地址, true)
+3.2 设置请求头 setRequestHeader()
+4. xhr.send(data) 发送 data只有在post请求的时候才有效
+-->

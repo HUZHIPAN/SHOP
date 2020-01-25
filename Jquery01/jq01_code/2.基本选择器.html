@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jquery 基本选择器</title>
+</head>
+<body>
+
+<div id="myDiv">
+    myDiv
+</div>
+
+<div class="classDiv">
+    classDiv
+</div>
+<div class="classDiv">
+    classDiv
+</div>
+<div class="classDiv">
+    classDiv
+</div>
+
+<script type="text/javascript" src="./jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    // 基本选择器
+    // document.getElementById();
+    // $()
+    // id选择器
+    console.dir($('#myDiv'));
+    // class选择器
+    console.dir($('.classDiv'));
+    // 标签选择器
+    console.dir($('div'));
+    // 通配符
+    console.dir($('*'));
+</script>
+</body>
+</html>
+命令

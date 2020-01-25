@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jjquery 属性选择器</title>
+</head>
+<body>
+
+<div id="myDiv" title="17859">
+    myDiv
+</div>
+
+<div class="classDiv" title="1523">
+    classDiv123
+</div>
+<div class="classDiv" title="456" alt="456">
+    classDiv456
+</div>
+<div class="classDiv" title="1523" alt="123">
+    classDiv123
+</div>
+
+<script type="text/javascript" src="./jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+// 属性选择器
+// 当标签中某个属性存在的时候选取
+console.dir($('div[title]'));
+
+// 当标签中的某个属性等于某个值得时候获取
+console.dir($('div[title=123]'));
+
+// 当标签中的某个属性不等于某个值的时候获取
+console.dir($('div[title!=123]'));
+
+// 当标签的某个属性的值开头等于某个值时获取
+console.dir($('div[title^=1]'))
+
+// 当标签的某个属性的值结尾等于某个值时获取
+console.dir($('div[title$=3]'));
+
+// 当属性中存在某个值时获取
+console.dir($('div[title*=5]'));
+
+// 复合选择器 属性的并且条件
+console.dir($('div[alt][title=456]'));
+</script>
+</body>
+</html>

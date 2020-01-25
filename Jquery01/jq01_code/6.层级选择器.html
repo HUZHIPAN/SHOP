@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jjquery 层级选择器</title>
+</head>
+<body>
+
+<span>小三</span>
+<div>
+    <p>p1</p>
+    <span>
+        <p>pp1</p>
+    </span>
+</div>
+<span>正房</span>
+<p>妾1</p>
+<p>妾2</p>
+
+
+<script type="text/javascript" src="./jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+// 层级选择器
+// 选择div下面的所有p
+console.dir($('div p'));
+
+// 找儿子
+console.dir($('div > p'));
+
+// 找相邻 紧凑着的
+console.dir($('div + span'));
+
+// 向后查找
+console.dir($('div ~ p'));
+</script>
+</body>
+</html>

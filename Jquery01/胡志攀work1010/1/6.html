@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层级选择器</title>
+</head>
+<body>
+    <span>小三</span>
+    <div title="123">
+        <p>p1</p>
+        <span>
+            <p>pp1</p>
+        </span>
+    </div>
+
+<script src="../jquery-3.4.1.js"></script>
+<script>
+    console.dir($('div p'));
+    console.dir($('div *'));
+    console.dir($('div > p + span > p'));
+
+    console.dir($('span + div[title=25]'));
+
+    console.dir($('span ~ p'))
+</script>
+</body>
+</html>

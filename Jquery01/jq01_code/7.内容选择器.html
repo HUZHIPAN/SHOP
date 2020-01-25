@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jjquery 内容选择器</title>
+</head>
+<body>
+
+<span>小三</span>
+<div>
+    <p>p1</p>
+    <span>
+        <p>pp1</p>
+    </span>
+</div>
+<span>正房</span>
+<p>妾1</p>
+<p>妾2</p>
+<p></p>
+<p>
+    <span></span>
+</p>
+<div>
+    #############3div1
+</div>
+<div>
+    #############3div2
+</div>
+<div>
+    #############3div3
+</div>
+
+
+<script type="text/javascript" src="./jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+// 内容选择器
+// 选择的元素下面拥有指定的文本就选取
+console.dir($('p:cont ains("p1")'));
+
+// 获取标签下没有内容的标签 获取空标签
+console.dir($('p:empty'));
+
+// 当选中元素包含某个元素的时候选取
+console.dir($('div:has(p)'));
+
+// 当标签内有内容的时候就获取
+console.dir($('p:parent'));
+</script>
+</body>
+</html>

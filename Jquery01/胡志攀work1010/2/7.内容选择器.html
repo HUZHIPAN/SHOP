@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery</title>
+</head>
+<body>
+<span>小三</span>
+<div>
+    <p>p1</p>
+    <span>
+        <p>pp1</p>
+    </span>
+</div>
+<span>正房</span>
+<p>妾1</p>
+<p>妾2</p>
+<p></p>
+<p>
+    <span></span>
+</p>
+<div>
+    #############3div1
+</div>
+<div>
+    #############3div2
+</div>
+<div>
+    #############3div3
+</div>
+
+<script type="text/javascript" src="../jquery-3.4.1.js"></script>
+
+<script>
+    console.dir($('p:contains("p1")'));
+
+    console.dir($('p:empty'));
+
+    console.dir($('div:has(p)'));
+
+    console.dir($('p:parent'));
+</script>   
+</body>
+</html>
